@@ -36,11 +36,12 @@ This repository contains minimal packages to control the scout robot using ROS.
 * Start the base node for the Scout robot
 
     ```
-    $ ros2 launch scout_base scout_base.launch.py
+    sudo ip link set can0 up type can bitrate 500000
+    ros2 launch scout_base scout_base.launch.py
     ```
 
 * Start the keyboard tele-op node
 
     ```
-    $ ros2 run teleop_twist_keyboard teleop_twist_keyboard
+    ros2 run teleop_twist_keyboard teleop_twist_keyboard
     ```
